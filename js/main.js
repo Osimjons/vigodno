@@ -1,122 +1,5 @@
-/*"use strict";
-const button = document.getElementById("btn");
-button.addEventListener("click", function () {
-  calk();
-  document.getElementById("myModal").classList.add("open");
-});
-document.getElementById("modalCloseBtn").addEventListener("click", function () {
-  document.getElementById("myModal").classList.remove("open");
-});
 
-function calk() {
-  // Получаем значения из полей ввода
-  let price1Value = parseFloat(document.getElementById("price1").value);
-  let count1Value = parseFloat(document.getElementById("count1").value);
-  let price2Value = parseFloat(document.getElementById("price2").value);
-  let count2Value = parseFloat(document.getElementById("count2").value);
 
-  // Вызываем функцию calculate и передаем значения
-  calculate(price1Value, count1Value, price2Value, count2Value);
-}
-
-function calculate(price1 = 0, count1 = 0, price2 = 0, count2 = 0) {
-  // Рассчитываем цену за единицу для каждого товара
-  const pricePerUnit1 = (cout1 / price1).toFixed(2);
-  const pricePerUnit2 = (count2 / price2).toFixed(2);
-
-  console.log(`Цена за единицу товара 1: ${pricePerUnit1} руб.`);
-  console.log(`Цена за единицу товара 2: ${pricePerUnit2} руб.`);
-
-  if (pricePerUnit1 < pricePerUnit2) {
-    console.log(`Товар 1 выгоднее.`);
-  } else if (pricePerUnit1 > pricePerUnit2) {
-    console.log(`Товар 2 выгоднее.`);
-  } else {
-    console.log(`Цены одинаковые.`);
-  }
-}
-function modal() {
-  document.write(`  <div class="modal" id="myModal">
-    <div class="modal__box">
-      <img class="modal__close-btn" id="modalCloseBtn" src="img/close.svg" alt="Иконка-Закрыть">
-      <h2 class="modal__title">Результаты расчета</h2>
-      <div class="modal__content">
-        <p class="modal__text">Цена за единицу товара 1: ${pricePerUnit1} руб.</p>
-        <p class="modal__text">Цена за единицу товара 2: ${pricePerUnit2} руб.</p>
-        <p class="modal__text">console.log(``);</p>
-      </div>
-    </div>
-  </div>`);
-}
-
-*/
-/*
-"use strict";
-
-const button = document.getElementById("btn");
-button.addEventListener("click", function () {
-  const { pricePerUnit1, pricePerUnit2, resultMessage } = calk();
-  displayModal(pricePerUnit1, pricePerUnit2, resultMessage);
-});
-
-document.getElementById("modalCloseBtn").addEventListener("click", function () {
-  document.getElementById("myModal").classList.remove("open");
-});
-
-function calk() {
-  // Получаем значения из полей ввода
-  let price1Value = parseFloat(document.getElementById("price1").value);
-  let count1Value = parseFloat(document.getElementById("count1").value);
-  let price2Value = parseFloat(document.getElementById("price2").value);
-  let count2Value = parseFloat(document.getElementById("count2").value);
-
-  // Вызываем функцию calculate и передаем значения
-  return calculate(price1Value, count1Value, price2Value, count2Value);
-}
-
-function calculate(price1 = 0, count1 = 0, price2 = 0, count2 = 0) {
-  // Рассчитываем цену за единицу для каждого товара
-  const pricePerUnit1 = (price1 / count1).toFixed(2);
-  const pricePerUnit2 = (price2 / count2).toFixed(2);
-  let resultMessage;
-  if (pricePerUnit1 < pricePerUnit2) {
-    resultMessage = "Товар 1 выгоднее.";
-  } else if (pricePerUnit1 > pricePerUnit2) {
-    resultMessage = "Товар 2 выгоднее.";
-  } else {
-    resultMessage = "Цены одинаковые.";
-  }
-  return {
-    pricePerUnit1,
-    pricePerUnit2,
-    resultMessage,
-  };
-}
-
-function displayModal(pricePerUnit1 = 0, pricePerUnit2 = 0, resultMessage) {
-  const modalElement = document.getElementById("myModal");
-  modalElement.innerHTML = `
-    <div class="modal__box">
-      <img class="modal__close-btn" id="modalCloseBtn" src="img/close.svg" alt="Иконка-Закрыть">
-      <h2 class="modal__title">Результаты расчета</h2>
-      <div class="modal__content">
-        <p class="modal__text">Цена за единицу товара 1: ${pricePerUnit1} руб.</p>
-        <p class="modal__text">Цена за единицу товара 2: ${pricePerUnit2} руб.</p>
-        <p class="modal__text">${resultMessage}</p>
-      </div>
-    </div>
-  `;
-  modalElement.classList.add("open");
-  closeModal();
-}
-function closeModal() {
-  document
-    .getElementById("modalCloseBtn")
-    .addEventListener("click", function () {
-      document.getElementById("myModal").classList.remove("open");
-    });
-}
-*/
 /*
 "use strict";
 
@@ -210,8 +93,8 @@ function isValidNumber(value) {
 
 function calculate(price1 = 0, count1 = 0, price2 = 0, count2 = 0) {
   // Рассчитываем цену за единицу для каждого товара
-  const pricePerUnit1 = (count1 / price1 ).toFixed(2);
-  const pricePerUnit2 = (count2 / price2 ).toFixed(2);
+  const pricePerUnit1 = ( price1 / count1 ).toFixed(2);
+  const pricePerUnit2 = ( price2 / count2 ).toFixed(2);
   let resultMessage;
   if (pricePerUnit1 < pricePerUnit2) {
     resultMessage = "Товар 1 выгоднее";
