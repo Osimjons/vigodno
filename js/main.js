@@ -210,8 +210,8 @@ function isValidNumber(value) {
 
 function calculate(price1 = 0, count1 = 0, price2 = 0, count2 = 0) {
   // Рассчитываем цену за единицу для каждого товара
-  const pricePerUnit1 = (price1 / count1).toFixed(2);
-  const pricePerUnit2 = (price2 / count2).toFixed(2);
+  const pricePerUnit1 = (count1 / price1 ).toFixed(2);
+  const pricePerUnit2 = (count2 / price2 ).toFixed(2);
   let resultMessage;
   if (pricePerUnit1 < pricePerUnit2) {
     resultMessage = "Товар 1 выгоднее";
