@@ -67,6 +67,7 @@ function displayModal(pricePerUnit1 = 0, pricePerUnit2 = 0, resultMessage) {
 const button = document.getElementById("btn");
 button.addEventListener("click", function (event) {
   event.preventDefault();
+navigator.vibrate ([300, 500, 1000, 300])
   const { pricePerUnit1, pricePerUnit2, resultMessage } = calk();
   displayModal(pricePerUnit1, pricePerUnit2, resultMessage);
 });
